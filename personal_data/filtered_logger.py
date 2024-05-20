@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+"""filter logger"""
+
 import re
 from typing import List
 import logging
