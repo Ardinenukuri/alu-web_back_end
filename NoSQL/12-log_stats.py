@@ -25,7 +25,10 @@ def main(collection):
 
 
 if __name__ == "__main__":
-    client = MongoClient()
-    db = client.logs
-    logs = db.nginx
-    main(logs)
+    try:
+        client = MongoClient()
+        db = client.logs
+        logs = db.nginx
+        main(logs)
+    except Exception as e:
+        print(f"Error: {e}")
